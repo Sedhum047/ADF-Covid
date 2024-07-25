@@ -1,0 +1,33 @@
+{
+	"name": "pl_processed_population_data",
+	"properties": {
+		"activities": [
+			{
+				"name": "ExecutePopulationData",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/sedhu2024@outlook.com/covid/transform_population_data"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_db_covid_cluster",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "processed"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-07-23T04:50:21Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
